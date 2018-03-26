@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/parent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.sterbon.weatherer.MainActivity"
+                android:background="@drawable/weatherer">
+    <TextView
+        android:id="@+id/timezone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:textAppearance="@style/TextAppearance.AppCompat"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/place"
+        android:layout_marginTop="46dp"
+        android:layout_toEndOf="@+id/timezone"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout3"
+        android:layout_marginTop="40dp"
+        android:layout_toEndOf="@+id/time"
+        android:text="HUMIDITY"
+        android:textColor="?android:attr/colorForeground"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/humidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView4"
+        android:layout_below="@+id/textView4"
+        android:layout_marginEnd="19dp"
+        android:layout_marginTop="20dp"
+        android:text="--"
+        android:textColor="@color/cast_libraries_material_featurehighlight_outer_highlight_default_color"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView4"
+        android:layout_alignBottom="@+id/textView4"
+        android:layout_marginEnd="6dp"
+        android:layout_toStartOf="@+id/time"
+        android:text="RAIN"
+        android:textColor="?android:attr/colorForeground"
+        android:textColorHighlight="?attr/colorPrimary"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/precip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/humidity"
+        android:layout_alignBottom="@+id/humidity"
+        android:layout_alignEnd="@+id/textView8"
+        android:text="-%"
+        android:textColor="@color/main_bg_color"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/place"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="--"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/main_bg_color"/>
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/place"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:text="AM/PM"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="?android:attr/colorForeground"
+        android:textSize="24sp"/>
+
+    <TextView
+        android:id="@+id/summary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/temp"
+        android:layout_centerHorizontal="true"
+        android:text="--"
+        android:textColor="@color/main_bg_color"
+        android:textSize="20sp"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/timezone"
+        android:layout_marginTop="27dp">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            android:layout_below="@+id/timezone"
+            android:layout_marginEnd="8dp"
+            android:layout_toStartOf="@+id/time"
+            app:srcCompat="@drawable/def"/>
+
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton2"
+        android:layout_width="54dp"
+        android:layout_height="78dp"
+        android:layout_below="@+id/summary"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_weight="10"
+        android:clickable="true"
+        app:backgroundTint="@android:color/holo_blue_dark"
+        app:fabSize="normal"
+        app:srcCompat="@drawable/mic"/>
+
+    <fragment
+        android:id="@+id/place_autocomplete_fragment"
+        android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/place_autocomplete_item_powered_by_google"/>
+
+    <TextView
+        android:id="@+id/temp"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/humidity"
+        android:layout_marginTop="31dp"
+        android:text="--"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+        android:textColor="@color/cast_expanded_controller_background_color"
+        android:textSize="100sp"
+        android:typeface="monospace"/>
+
+</RelativeLayout>

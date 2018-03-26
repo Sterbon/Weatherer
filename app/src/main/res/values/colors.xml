@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorDay">#26c6da</color>
+    <color name="colorPrimaryDark">#bfbfbf</color>
+    <color name="colorAccent">#000000</color>
+    <color name="colorNight">#FF6D7576</color>
+    <color name="Purple">#ab47bc</color>
+</resources>

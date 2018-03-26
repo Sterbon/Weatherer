@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Weatherer</string>
+    <string name="forecast_url">https://api.darksky.net/forecast/5100be8d8a2ccb9f5520d9086a4b49bc/28.5921,77.0460</string>
+    <string name="api_key">5100be8d8a2ccb9f5520d9086a4b49bc</string>
+    <string name="error_title">Network Faliure!</string>
+    <string name="error_msg">There are some internal issues! Please try again later</string>
+    <string name="error_resp">OK</string>
+
+</resources>
